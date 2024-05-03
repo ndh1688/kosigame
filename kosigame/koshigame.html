@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=0.5625">
+    <title>コシチェイに贈り物を贈ろう！</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url('background.png');
+            background-repeat: no-repeat; /* 背景画像の繰り返し表示を無効にする */
+        }
+        #character {
+            position: absolute; /* キャラクターを絶対位置指定 */
+            top: -30px; /* 上からの位置 */
+            left: 20px; /* 左からの位置 */
+            z-index: 2; /* キャラクターを前面に表示 */
+        }
+        #character img {
+            width: 380px; /* キャラクター画像の幅 */
+            height: auto; /* 高さは自動調整 */
+        }
+        #overlay-image {
+            position: absolute; /* 重ねる画像を絶対位置指定 */
+            top: 20px; /* 上からの位置 */
+            left: -10px; /* 左からの位置 */
+            width: 50px; /* 重ねる画像の幅 */
+            height: auto; /* 高さは自動調整 */
+            z-index: 3; /* 重ねる画像をキャラクターよりも前面に表示 */
+        }
+        #game-container {
+            position: relative;
+            width: 100%; /* ゲームコンテナの幅 */
+            height: 100%; /* ゲームコンテナの高さ */
+        }
+        .gift-area {
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            margin: 10px;
+            display: inline-block;
+        }
+        .gift-area img {
+            width: 50%;
+            height: 50%;
+            
+        <style>
+    #gift-area1 {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+    }
+    #gift-area2 {
+        position: absolute;
+        top: 50px;
+        left: 200px;
+    }
+    #gift-area3 {
+        position: absolute;
+        top: 200px;
+        left: 50px;
+    }
+    #gift-area4 {
+        position: absolute;
+        top: 200px;
+        left: 200px;
+    }
+</style>
+
+</head>
+<body>
+    <div id="game-container">
+        <div id="character">
+            <!-- キャラクターの画像 -->
+            <img src="character.png" alt="キャラクターの画像">
+            <!-- 上に重ねる画像 -->
+            <img id="overlay-image" src="overlay.png" alt="重ねる画像">
+        </div>
+        <!-- ドラッグ可能なプレゼントのエリア -->
+        <div class="gift-area" id="gift-area1" ondrop="drop(event, 'gift-area1')" ondragover="allowDrop(event)">
+            <img src="present1.png" alt="プレゼントの画像" draggable="true" ondragstart="drag(event)">
+        </div>
+        <div class="gift-area" id="gift-area2" ondrop="drop(event, 'gift-area2')" ondragover="allowDrop(event)">
+            <img src="present2.png" alt="プレゼントの画像" draggable="true" ondragstart="drag(event)">
+        </div>
+        <div class="gift-area" id="gift-area3" ondrop="drop(event, 'gift-area3')" ondragover="allowDrop(event)">
+            <img src="present3.png" alt="プレゼントの画像" draggable="true" ondragstart="drag(event)">
+        </div>
+        <div class="gift-area" id="gift-area4" ondrop="drop(event, 'gift-area4')" ondragover="allowDrop(event)">
+            <img src="present4.png" alt="プレゼントの画像" draggable="true" ondragstart="drag(event)">
+        </div>
+    </div>
+    <div id="dialog-box">
+        <p id="dialog-text"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
